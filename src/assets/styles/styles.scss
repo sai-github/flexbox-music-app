@@ -1,0 +1,148 @@
+@import "_colors.scss";
+@import "_variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/**
+* Basic styles for body
+*/
+body {
+  display: flex; /* flex superpowers activaed! */
+  flex-direction: column; /* Stack the flex-items vertically not the default horizontal view */
+
+  background-color: $app-background-color;
+  margin: 0;
+  font-family: Lato, sans-serif;
+  color: $app-font-color;
+  font-size: $app-font-size;
+  height: 100%;
+}
+
+/**
+* Main layout
+*/
+main {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+aside {
+  flex: 0 0 3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #f2f2f2;
+}
+
+.content {
+  flex: 1 1 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/**
+* Music head styles
+*/
+.music-head {
+  display: flex;
+  background-color: #4e4e4e;
+}
+
+.music-head img {
+  padding: 2rem;
+}
+
+.music-head .catty-music {
+  flex: 1 1 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-weight: 300;
+  color: $app-font-on-dark;
+  letter-spacing: 0.1rem;
+  padding: 2rem;
+}
+
+.music-head .catty-music div:nth-child(1) p:first-child {
+  font-size: 2 * $app-font-size;
+  margin: 0 0 10px;
+}
+
+.music-head .catty-music div:nth-child(1) p:not(:first-child) {
+  font-size: $app-font-size;
+  padding: 2px 0px;
+}
+
+.music-head .catty-music div:nth-child(2) i.fa {
+  font-size: $app-font-size;
+  padding: 0 0.7em;
+}
+
+/**
+* Music list styles
+*/
+.music-list {
+  flex: 1 1 auto;
+  list-style-type: none;
+  padding: 0rem 1rem 0rem 1rem;
+}
+
+.music-list li {
+  display: flex;
+  padding: 0rem 1.5rem;
+}
+
+.music-list li p {
+  flex: 1 1 25%; // I too agree this is sweet
+}
+
+.music-list li p .catty-cloud {
+  border: 1px solid black;
+  font-size: 0.6rem;
+  padding: 3px;
+}
+
+.music-list li:nth-child(2n) {
+  background-color: #f2f2f2;
+}
+
+/**
+* Footer
+*/
+footer {
+  flex: 0 0 90px; // we don't want the footer to grow or shrink but at 90px, remember flex-direction is `column` so basis adjusts height
+  padding: 10px;
+  color: $app-font-on-dark;
+  background-color: rgba(61, 100, 158, 0.9);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .catty-music-small {
+  display: flex;
+}
+
+footer .catty-music-small div {
+  padding: 0rem 0.5rem;
+}
+
+footer .catty-music-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+}
