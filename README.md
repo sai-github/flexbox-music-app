@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/sai-github/flexbox-music-app.svg?branch=master)](https://travis-ci.com/sai-github/flexbox-music-app)
+
 # Responsive Design with Flexbox
 
 This repo is excersie for the [online cource on educative](https://www.educative.io/courses/understanding-flexbox-everything-you-need-to-know) by [Ohans Emmanuel](https://twitter.com/OhansEmmanuel)
@@ -32,3 +34,7 @@ I tried to do the heavy lifting that recent frameworks like angular provide (not
 - It also helps in making you use flexbox in right way. Special thanks to the writer [Ohans Emmanuel](https://twitter.com/OhansEmmanuel)
 - It points to different resources to learn more on flexbox (ex: [Solved-by-flexbox project](https://github.com/philipwalton/flexbugs))
 - The content of the course is also avilable in a repo [here](https://github.com/ohansemmanuel/Understanding-Flexbox)
+
+### CI with Travis
+
+- We set up travis with configs as in `.travis.yml`.
