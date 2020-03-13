@@ -1,12 +1,12 @@
 @import "_colors.scss";
 @import "_variables.scss";
+@import "_screens.scss";
 
 * {
   box-sizing: border-box;
 }
 
-html,
-body {
+html {
   height: 100%;
 }
 
@@ -41,6 +41,10 @@ aside {
   align-items: center;
   justify-content: space-around;
   background-color: #f2f2f2;
+
+  @include for-phone-only {
+    display: none;
+  }
 }
 
 .content {
@@ -56,6 +60,11 @@ aside {
 .music-head {
   display: flex;
   background-color: #4e4e4e;
+
+  @include for-phone-only {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .music-head img {
@@ -73,16 +82,29 @@ aside {
   color: $app-font-on-dark;
   letter-spacing: 0.1rem;
   padding: 2rem;
+
+  @include for-phone-only {
+    padding: 0rem 1rem 2rem 1rem;
+    align-items: center;
+  }
 }
 
 .music-head .catty-music div:nth-child(1) p:first-child {
   font-size: 2 * $app-font-size;
   margin: 0 0 10px;
+
+  @include for-phone-only {
+    font-size: 1.5 * $app-font-size;
+    margin: 0px 0px 20px 0px;
+  }
 }
 
 .music-head .catty-music div:nth-child(1) p:not(:first-child) {
   font-size: $app-font-size;
   padding: 2px 0px;
+  @include for-phone-only {
+    display: none;
+  }
 }
 
 .music-head .catty-music div:nth-child(2) i.fa {
@@ -106,6 +128,27 @@ aside {
 
 .music-list li p {
   flex: 1 1 25%; // I too agree this is sweet
+  @include for-phone-only {
+    flex: 0 0 50%;
+  }
+}
+
+.artist {
+  @include for-phone-only {
+    display: none;
+  }
+}
+
+.duration {
+  @include for-phone-only {
+    text-align: end;
+  }
+}
+
+.cloud-link {
+  @include for-phone-only {
+    display: none;
+  }
 }
 
 .music-list li p .catty-cloud {
@@ -144,5 +187,9 @@ footer .catty-music-controls {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 50%;
+  width: 60%;
+
+  @include for-phone-only {
+    width: 50%;
+  }
 }
